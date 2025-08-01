@@ -14,7 +14,6 @@ return {
   },
 
   keys = {
-    -- toggle git
-    { "<leader>tg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+    { "<leader>tg", "<cmd>LazyGit<cr>", desc = "Open LazyGit" },
   },
 }
