@@ -12,7 +12,7 @@ return {
       --vim.opt.termguicolors = true
       --local tree = require("nvim-tree.api")
       --vim.keymap.set('n', '<leader>crp', tree.tree.change_root_to_parent, {})
-      vim.keymap.set("n", "<leader>sft", ":Neotree toggle<CR>", {})
+      vim.keymap.set("n", "<leader>tn", ":Neotree toggle<CR>", { desc = "Toggle NeoTree" })
     end,
   },
   {
