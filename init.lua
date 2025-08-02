@@ -3,6 +3,7 @@ vim.cmd("set number")
 vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set tabstop=2")
+vim.cmd("set virtualedit=all")
 vim.cmd("set expandtab")
 vim.cmd("set statusline+=%F")
 vim.env.PATH = vim.env.PATH .. ":/home/btw/.ghcup/bin"
