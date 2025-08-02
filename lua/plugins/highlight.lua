@@ -12,7 +12,7 @@ return {
 					generate_requires_npm = false,
 					requires_generate_from_grammar = false,
 				},
-                filetype = "k",
+				filetype = "k",
 			}
 			vim.filetype.add({
 				extension = {
@@ -21,7 +21,17 @@ return {
 			})
 			local config = require("nvim-treesitter.configs")
 			config.setup({
-				ensure_installed = { "lua", "haskell", "xml", "c_sharp", "elm", "markdown", "fsharp", "kolibri", "typescript" },
+				ensure_installed = {
+					"lua",
+					"haskell",
+					"xml",
+					"c_sharp",
+					"elm",
+					"markdown",
+					"fsharp",
+					"kolibri",
+					"typescript",
+				},
 				highlight = { enable = true },
 				indent = { enable = true },
 			})
