@@ -19,8 +19,6 @@ return {
         show_preview = true,
         follow_symlinks = false,
       })
-      --		vim.keymap.set('n', "<leader>lg", "<cmd>Telescope dir live_grep<CR>", {})
-      --		vim.keymap.set('n', "<C-p>", "<cmd>Telescope dir find_files<CR>", {})
     end,
   },
   {

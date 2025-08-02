@@ -22,7 +22,7 @@ return {
           "lemminx",
           "elmls",
           "pylsp",
-          "fsautocomplete", -- ADD FSAC to Mason's managed servers
+          "fsautocomplete",
         },
       })
     end,
