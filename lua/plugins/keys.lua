@@ -13,6 +13,7 @@ return {
 				{ "<leader>d", name = "DAP functions", icon = { icon = "", color = "red" } },
 				{ "<leader>e", name = "Extended vim motions", icon = { icon = "󰐖", color = "green" } },
 				{ "<leader>ea", name = "Extended vim motions", icon = { icon = "󰲋", color = "blue" } },
+				{ "<leader>s", name = "Settings", icon = { icon = "", color = "white" } },
 			},
 		},
 	},
@@ -23,17 +24,29 @@ return {
 		{ mode = { "n", "v" }, "<leader>eP", "d<esc>i<cr><esc>k$pkgJgJ", desc = "Insert(P) line between" },
 
 		{ mode = { "v" }, "<leader>ea'", "\"cd<esc>i''<esc>h\"cp", desc = "Separate through ''" },
-		{ mode = { "v" }, "<leader>ea\"", "\"cd<esc>i''<esc>h\"cp", desc = "Separate through \"\"" },
-		{ mode = { "v" }, "<leader>ea(", "\"cd<esc>i()<esc>h\"cp", desc = "Separate through ()" },
-		{ mode = { "v" }, "<leader>ea)", "\"cd<esc>i()<esc>h\"cp", desc = "Separate through ()" },
-		{ mode = { "v" }, "<leader>ea[", "\"cd<esc>i[]<esc>h\"cp", desc = "Separate through []" },
-		{ mode = { "v" }, "<leader>ea]", "\"cd<esc>i[]<esc>h\"cp", desc = "Separate through []" },
-		{ mode = { "v" }, "<leader>ea{", "\"cd<esc>i{}<esc>h\"cp", desc = "Separate through {}" },
-		{ mode = { "v" }, "<leader>ea}", "\"cd<esc>i{}<esc>h\"cp", desc = "Separate through {}" },
-		{ mode = { "v" }, "<leader>ea<", "\"cd<esc>i<><esc>h\"cp", desc = "Separate through <>" },
-		{ mode = { "v" }, "<leader>ea>", "\"cd<esc>i<><esc>h\"cp", desc = "Separate through <>" },
-		{ mode = { "v" }, "<leader>eab", "\"cd<esc>i()<esc>h\"cp", desc = "Separate through ()" },
-		{ mode = { "v" }, "<leader>eaB", "\"cd<esc>i{}<esc>h\"cp", desc = "Separate through {}" },
-		{ mode = { "v" }, "<leader>ea`", "\"cd<esc>i``<esc>h\"cp", desc = "Separate through ``" },
+		{ mode = { "v" }, '<leader>ea"', "\"cd<esc>i''<esc>h\"cp", desc = 'Separate through ""' },
+		{ mode = { "v" }, "<leader>ea(", '"cd<esc>i()<esc>h"cp', desc = "Separate through ()" },
+		{ mode = { "v" }, "<leader>ea)", '"cd<esc>i()<esc>h"cp', desc = "Separate through ()" },
+		{ mode = { "v" }, "<leader>ea[", '"cd<esc>i[]<esc>h"cp', desc = "Separate through []" },
+		{ mode = { "v" }, "<leader>ea]", '"cd<esc>i[]<esc>h"cp', desc = "Separate through []" },
+		{ mode = { "v" }, "<leader>ea{", '"cd<esc>i{}<esc>h"cp', desc = "Separate through {}" },
+		{ mode = { "v" }, "<leader>ea}", '"cd<esc>i{}<esc>h"cp', desc = "Separate through {}" },
+		{ mode = { "v" }, "<leader>ea<", '"cd<esc>i<><esc>h"cp', desc = "Separate through <>" },
+		{ mode = { "v" }, "<leader>ea>", '"cd<esc>i<><esc>h"cp', desc = "Separate through <>" },
+		{ mode = { "v" }, "<leader>eab", '"cd<esc>i()<esc>h"cp', desc = "Separate through ()" },
+		{ mode = { "v" }, "<leader>eaB", '"cd<esc>i{}<esc>h"cp', desc = "Separate through {}" },
+		{ mode = { "v" }, "<leader>ea`", '"cd<esc>i``<esc>h"cp', desc = "Separate through ``" },
+
+		{
+			"<leader>sv",
+			function()
+				if vim.o.virtualedit == "all" then
+					vim.opt.virtualedit = "none"
+				else
+					vim.opt.virtualedit = "all"
+				end
+			end,
+			desc = "Toggle virtual edit",
+		},
 	},
 }
