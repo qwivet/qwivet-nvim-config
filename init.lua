@@ -3,8 +3,8 @@ vim.cmd("set number")
 vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set tabstop=2")
+vim.cmd("set virtualedit=none")
 vim.cmd("set expandtab")
-vim.cmd("set statusline+=%F")
 vim.env.PATH = vim.env.PATH .. ":/home/btw/.ghcup/bin"
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -22,7 +22,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	end
 end
 vim.opt.rtp:prepend(lazypath)
-
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
