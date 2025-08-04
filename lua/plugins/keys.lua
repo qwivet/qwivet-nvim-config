@@ -14,6 +14,7 @@ return {
 				{ "<leader>e", name = "Extended vim motions", icon = { icon = "󰐖", color = "green" } },
 				{ "<leader>ea", name = "Extended vim motions", icon = { icon = "󰲋", color = "blue" } },
 				{ "<leader>s", name = "Settings", icon = { icon = "", color = "white" } },
+				{ "<leader>c", name = "Custom commands", icon = { icon = "", color = "purple" } },
 			},
 		},
 	},
@@ -36,6 +37,8 @@ return {
 		{ mode = { "v" }, "<leader>eab", '"cd<esc>i()<esc>h"cp', desc = "Separate through ()" },
 		{ mode = { "v" }, "<leader>eaB", '"cd<esc>i{}<esc>h"cp', desc = "Separate through {}" },
 		{ mode = { "v" }, "<leader>ea`", '"cd<esc>i``<esc>h"cp', desc = "Separate through ``" },
+
+    { "<leader>ch", ":noh", desc = "Disable highlight" },
 
 		{
 			"<leader>sv",
